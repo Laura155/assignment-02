@@ -1,0 +1,1147 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+<style>
+    #container {
+        position: absolute;
+        top: 25vmin;
+        left: 25vmin;
+        width: 60vw;
+        height: 60vw;
+     }
+    
+    #globe {
+        position: absolute;
+        width: 50vw;
+        height: 50vw;
+        margin-left: 8%;
+        background-color: hsla(3, 1.5%, 47.3%, .2);
+        border: 2px solid hsl(0, 0%, 0%);
+        border-radius: 50%;
+        overflow: hidden;
+        animation-play-state: paused;
+   }
+     
+    #container:hover #globe{
+        animation-name: night;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    @keyframes night{
+        from{background-color: hsla(3, 1.5%, 47.3%, .2)}
+        50%{background-color: hsla(36, 51%, 8%,1)}
+        to{background-color: hsla(3, 1.5%, 47.3%, .2)}
+        
+    }
+    
+    #moon {
+        position: absolute;
+        top: 90%;
+        left: 65%;
+        width: 15%;
+        height: 15%;
+        background-color: hsl(58, 79%, 88%);
+        border-radius: 50%;
+        animation-play-state: paused;
+    }
+    
+    #container:hover #moon{
+        animation-name: moonRay;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+     @keyframes moonRay {
+        from{top: 80%; filter: opacity(.75);}
+        50%{top: 10%; filter: opacity(1);}
+        to{top: 80%; filter: opacity(.75);}
+    }
+    
+    #ground {
+        position: absolute;
+        top: 75%;
+        width:100%;
+        height: 25%;
+        background-image: linear-gradient(hsl(89, 4%, 82%), hsl(268, 84%, 23%) 60%);
+    }
+    
+    #building1 {
+        position: absolute;
+        top: 65%;
+        width: 10%;
+        height: 10%;
+        background-image: linear-gradient(hsl(207, 28%, 41%), hsl(89, 4%, 82%) 98%);
+        
+    }
+    
+    #building2 {
+        position: absolute;
+        top: 58%;
+        left: 10%;
+        width: 15%;
+        height: 17%;
+        background-image: linear-gradient(hsl(315, 47%, 26%), hsl(89, 4%, 82%) 98%);
+    }
+    
+    #building3 {
+        position: absolute;
+        top: 55%;
+        left: 24.5%;
+        width: 8%;
+        height: 20%;
+        background-image: linear-gradient(hsl(49, 47%, 26%), hsl(89, 4%, 82%) 98%);
+    }
+    
+    #building4 {
+        position: absolute;
+        top: 63%;
+        left: 33%;
+        width: 17%;
+        height: 12%;
+        background-image: linear-gradient(hsl(240, 45%, 25%), hsl(89, 4%, 82%) 98%);
+    }
+    
+    #building5 {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        width: 10%;
+        height: 20%;
+        background-image: linear-gradient(hsl(0, 45%, 38%), hsl(89, 4%, 82%) 98%);
+    }
+    
+    #building6 {
+        position: absolute;
+        top: 60%;
+        left: 59.5%;
+        width: 10%;
+        height: 15%;
+        background-image: linear-gradient(hsl(188, 15%, 35%), hsl(89, 4%, 82%) 98%);
+    }
+    
+     #building7 {
+        position: absolute;
+        top: 55%;
+        left: 70%;
+        width: 10%;
+        height: 20%;
+        background-image: linear-gradient(hsl(85, 35%, 25%), hsl(89, 4%, 82%) 98%);
+    }
+    
+    #building8 {
+        position: absolute;
+        top: 62%;
+        left: 80%;
+        width: 13%;
+        height: 13%;
+        background-image: linear-gradient(hsl(29, 45%, 53%), hsl(89, 4%, 82%) 98%);
+    }
+    
+    #building9 {
+        position: absolute;
+        top: 56.9%;
+        left: 92%;
+        width: 13%;
+        height: 18%;
+        background-image: linear-gradient(hsl(73, 45%, 53%), hsl(89, 4%, 82%) 98%);
+    }
+    
+   #star1 {
+        position: absolute;
+        top: -5%;
+        left: 25%;
+        width: 5%;
+        height: 5%;
+        background-color:  hsl(164, 56%, 42%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    #container:hover #star1{
+        animation-name: travela;
+        animation-duration: 20s;
+        animation-delay: 5s;
+        animation-timing-function: ease-in-out 2.5s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        
+    }
+    @keyframes travela{
+        0% {top: 1%; opacity: .35; background-color: hsl(164, 56%, 42%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(31, 70%, 71%); transform: rotate(150deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(31, 70%, 71%); transform: rotate(300deg);}
+    }
+    
+   #star2 {
+        position: absolute;
+        top: -5%;
+        left: 30%;
+        width: 3.5%;
+        height: 3.5%;
+        background-color:  hsl(67, 36%, 46%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star2{
+        animation-name: travelb;
+        animation-duration: 20s;
+        animation-delay: 8s;
+        animation-timing-function: ease-in-out 2.5s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelb{
+        0% {top: 1%; opacity: .35; background-color: hsl(67, 36%, 46%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(198, 33%, 46%); transform: rotate(105deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(198, 33%, 46%); transform: rotate(210deg);}
+
+    }
+    
+    #star3 {
+        position: absolute;
+        top: -5%;
+        left: 35%;
+        width: 3%;
+        height: 3%;
+        background-color:  hsl(169, 28%, 19%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star3{
+        animation-name: travelc;
+        animation-duration: 20s;
+        animation-delay: 10s;
+        animation-timing-function: ease-in-out 2.5s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelc{
+        0% {top: 1%; opacity: .35; background-color: hsl(169, 28%, 19%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(152, 70%, 71%); transform: rotate(90deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(152, 70%, 71%); transform: rotate(180deg);}
+    }
+    
+    #star4 {
+        position: absolute;
+        top: -5%;
+        left: 40%;
+        width: 4%;
+        height: 4%;
+        background-color:  hsl(303, 28%, 57%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star4{
+        animation-name: traveld;
+        animation-duration: 20s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes traveld{
+        0% {top: 1%; opacity: .35; background-color: hsl(303, 28%, 57%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(0, 28%, 57%); transform: rotate(190deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(0, 28%, 57%); transform: rotate(280deg);}
+    }
+    
+    #star5 {
+        position: absolute;
+        top: -5%;
+        left: 45%;
+        width: 4.5%;
+        height: 4.5%;
+        background-color:  hsl(264, 55%, 57%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star5{
+        animation-name: travele;
+        animation-duration: 20s;
+        animation-delay: 4s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    travele{
+        0% {top: 1%; opacity: .35; background-color: hsl(264, 55%, 57%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(125, 55%, 57%); transform: rotate(105deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(125, 55%, 57%); transform: rotate(210deg);}
+    }
+    
+    #star6 {
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        width: 5%;
+        height: 5%;
+        background-color:  hsl(49, 55%, 57%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+     #container:hover #star6{
+        animation-name: travelf;
+        animation-duration: 20s;
+        animation-delay: 7s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelf{
+        0% {top: 1%; opacity .35; background-color: hsl(49, 55%, 57%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(244, 55%, 57%); transform: rotate(90deg);}
+        100% {top: 90%;  opacity: .35; background-color: hsl(244, 55%, 57%); transform: rotate(180deg);}
+    }
+    
+    #star7 {
+        position: absolute;
+        top: -5%;
+        left: 57.5%;
+        width: 4%;
+        height: 4%;
+        background-color:  hsl(4, 55%, 57%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+      #container:hover #star7{
+        animation-name: travelg;
+        animation-duration: 20s;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelg{
+        0% {top: 1; opacity: .35; background-color: hsl(4, 55%, 57%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(155, 55%, 57%); transform: rotate(120deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(155, 55%, 57%); transform: rotate(240deg);}
+    }
+    
+   #star8 {
+        position: absolute;
+        top: -5%;
+        left: 65%;
+        width: 5%;
+        height: 5%;
+        background-color:  hsl(249, 55%, 57%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+       animation-play-state: paused;
+    }
+    
+    @keyframes travelh{
+        0% {top: -3%; opacity: .35; background-color: hsl(249, 55%, 57%); transform: rotate(0deg);}
+        50% {top: 55%; opacity: 1; background-color: hsl(199, 100%, 57%); transform: rotate(155deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(199, 100%, 57%); transform: rotate(310deg);}
+    }
+    
+     #container:hover #star8{
+        animation-name: travelh;
+        animation-duration: 20s;
+        animation-delay: 9s;
+        animation-timing-function: ease-in-out 2.5s;
+         animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    #star9 {
+        position: absolute;
+        top: -5%;
+        left: 70%;
+        width: 3%;
+        height: 3%;
+        background-color: hsl(43, 100%, 50%) ;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+     #container:hover #star9{
+        animation-name: traveli;
+        animation-duration: 20s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes traveli{
+        0% {top: 1%; opacity: 0; background-color: hsl(43, 100%, 50%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: .95; background-color: hsl(133, 100%, 57%); transform: rotate(120deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(133, 100%, 57%); transform: rotate(240deg);}
+    }
+    
+  
+    
+    
+    #star10 {
+        position: absolute;
+        top: -5%;
+        left: 75%;
+        width: 4%;
+        height: 4%;
+        background-color: hsl(331, 60%, 74%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    
+     #container:hover #star10{
+        animation-name: travelj;
+        animation-duration: 20s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    
+    @keyframes travelj{
+        0% {top: 1%; opacity: .35; background-color: hsl(331, 60%, 74%); transform: rotate(0deg);}
+        50% {top: 50%; opacity: 1; background-color: hsl(164, 60%, 61%); transform: rotate(90deg);}
+        100% {top: 90%; opacity: .35; background-color: hsl(164, 60%, 61%); transform: rotate(180deg);}
+    }
+    
+    
+    .foot1 {
+        position: absolute;
+        top: 85%;
+        left: 26%;
+        width: 11%;
+        height: 3%;
+    }
+    
+    .foot2 {
+        position: absolute;
+        top: 85%;
+        left: 64%;
+        width: 11%;
+        height: 3%;
+    }
+    
+    .leg1 {
+        position: absolute;
+        top: 65%;
+        left: 30%;
+        width: 8%;
+        height: 20%;
+        transform: skewX(-12deg);
+    }
+    
+     .leg2 {
+        position: absolute;
+        top: 65%;
+        left: 63%;
+        width: 8%;
+        height: 20%;
+        transform: skewX(12deg);
+    }
+    
+     .baseouter {
+        position: absolute;
+        top: 48%;
+        left: 28%;
+        width: 50%;
+        height: 37%;
+        clip-path: polygon(16% 47%, 93% 47%, 100% 70%, 7% 70%);
+        background-color: hsl(0, 0%, 0%);
+        transform: rotate(180deg);
+    }
+    
+    .base1 {
+        position: absolute;
+        top: 48%;
+        left: 27.56%;
+        width: 51%;
+        height: 36%;
+        clip-path: polygon(16% 47%, 93% 47%, 100% 70%, 7% 70%);
+        background-color: hsl(228, 8%, 35%);
+        transform: rotate(180deg) scale(.95);
+    }
+    
+   .leg3 {
+        position: absolute;
+        top: 41%;
+        left: 40%;
+        width: 6%;
+        height: 18%;
+        transform: skewX(-12deg);
+    }
+    
+     .leg4 {
+        position: absolute;
+        top: 41%;
+        left: 55%;
+        width: 6%;
+        height: 18%;
+        transform: skewX(12deg);
+    }
+    
+     .baseouter1 {
+        position: absolute;
+        top: 27%;
+        left: 28%;
+        width: 49%;
+        height: 37%;
+        clip-path: polygon(16% 47%, 93% 47%, 100% 70%, 7% 70%);
+        background-color: hsl(0, 0%, 0%);
+        transform: rotate(180deg) scale(.75);
+    }
+    
+    .base2 {
+        position: absolute;
+        top: 26.7%;
+        left: 26%;
+        width: 53%;
+        height: 37%;
+        clip-path: polygon(16% 47%, 93% 47%, 100% 70%, 7% 70%);
+        background-color: hsl(228, 8%, 35%);
+        transform: rotate(180deg) scale(.67);
+    }
+    
+   .leg5 {
+        position: absolute;
+        top: 24.7%;
+        left: 45%;
+        width: 4%;
+        height: 15%;
+        transform: skewX(-12deg);
+    }
+
+     .leg6 {
+        position: absolute;
+        top: 24.7%;
+        left: 52%;
+        width: 4%;
+        height: 15%;
+        transform: skewX(12deg);
+    }
+
+     .baseouter2 {
+        position: absolute;
+        top: 10%;
+        left: 27.4%;
+        width: 49%;
+        height: 37%;
+        clip-path: polygon(16% 47%, 93% 47%, 100% 70%, 7% 70%);
+        background-color: hsl(0, 0%, 0%);
+        transform: rotate(180deg) scale(.53);
+    }
+    
+      .base3{
+        position: absolute;
+        top: 10.2%;
+        left: 27%;
+        width: 49.7%;
+        height: 36%;
+        clip-path: polygon(16% 47%, 93% 47%, 100% 70%, 7% 70%);
+        background-color: hsl(228, 8%, 35%);
+        transform: rotate(180deg) scale(.50);
+    }
+    
+    .topouter1 {
+        position: absolute;
+        top: 17%;
+        left: 41.25%;
+        width: 19%;
+        height: 9%;
+        background-color: hsl(0, 0%, 0%);
+        
+    }
+    
+    .top1 {
+        position: absolute;
+        top: 17.25%;
+        left: 41.7%;
+        width: 18.2%;
+        height: 8.25%;
+        background-color: hsl(228, 8%, 35%);
+    }
+    
+    .topouter2 {
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        width: 12%;
+        height: 7%;
+        background-color: hsl(0, 0%, 0%);
+        
+    }
+    .top2 {
+        position: absolute;
+        top: 10.4%;
+        left: 45.4%;
+        width: 11.3%;
+        height: 6.3%;
+        background-color: hsl(228, 8%, 35%)
+    }
+    
+    .top3 {
+        position: absolute;
+        top: 6%;
+        left: 49%;
+        width: 4%;
+        height: 4%;
+        background-color: hsl(228, 8%, 35%);
+        border: 1px solid hsl(0, 0%, 0%);
+        border-radius: 50%;
+        
+    }
+    
+    .tower {
+        background-color: hsl(228, 8%, 35%);
+        border: 1px solid hsl(0, 0%, 0%);
+    }
+    
+    .stick1 {
+        position: absolute;
+        top: 67%;
+        left: 33%;
+        width: 1%;
+        height: 18.7%;
+        transform: rotate(4deg) skewX(-10deg);
+    }
+     .stick2 {
+        position: absolute;
+        top: 67%;
+        left: 67.3%;
+        width: 1%;
+        height: 18.7%;
+        transform: rotate(-4deg) skewX(10deg);
+    }
+    
+     .stick3 {
+        position: absolute;
+        top: 46%;
+        left: 64%;
+        width: .95%;
+        height: 13.5%;
+        transform: rotate(-4deg) skewX(10deg);
+    }
+    
+     .stick4 {
+        position: absolute;
+        top: 46%;
+        left: 36.5%;
+        width: .95%;
+        height: 13.5%;
+        transform: rotate(4deg) skewX(-10deg);
+    }
+    
+     .stick5 {
+        position: absolute;
+        top: 25.5%;
+        left: 42%;
+        width: .90%;
+        height: 15%;
+        transform: rotate(1.75deg) skewX(-10deg);
+    }
+    
+     .stick6 {
+        position: absolute;
+        top: 25.5%;
+        left: 58.7%;
+        width: .90%;
+        height: 15%;
+        transform: rotate(-1.75deg) skewX(10deg);
+    }
+    
+    .stick7 {
+        position: absolute;
+        top: 17%;
+        left: 46%;
+        width: .85%;
+        height: 9%;
+       
+    }
+    
+    .stick8 {
+        position: absolute;
+        top: 17%;
+        left: 55%;
+        width: .85%;
+        height: 9%;
+    }
+    
+    .stick9{
+        position: absolute;
+        top: 17%;
+        left: 50.5%;
+        width: .85%;
+        height: 9%;
+       
+    }
+    .stick10 {
+        position: absolute;
+        top: 10%;
+        left: 48.7%;
+        width: .75%;
+        height: 7%;
+    }
+    
+    .stick11 {
+        position: absolute;
+        top: 10%;
+        left: 53%;
+        width: .70%;
+        height: 7%;
+    }
+     .stick12 {
+        position: absolute;
+        top: 40.25%;
+        left: 50%;
+        width: .80%;
+        height: 6%;
+    }
+     .stick13 {
+        position: absolute;
+        top: 59.5%;
+        left: 50%;
+        width: .90%;
+        height: 8%;
+    }
+    
+    .stick14 {
+        position: absolute;
+        top: 59%;
+        left: 40%;
+        width: .90%;
+        height: 8.7%;
+        transform: rotate(-15deg) skewX(2deg);
+    }
+    
+    .stick15 {
+        position: absolute;
+        top: 59%;
+        left: 60%;
+        width: .90%;
+        height: 8.7%;
+        transform: rotate(15deg) skewX(2deg);
+    }
+    
+    .stick16 {
+        position: absolute;
+        top: 40%;
+        left: 43%;
+        width: .80%;
+        height: 6%;
+        transform: rotate(-15deg) skewX(-2deg);
+    }
+    
+    .stick17 {
+        position: absolute;
+        top: 40%;
+        left: 57%;
+        width: .75%;
+        height: 6%;
+        transform: rotate(15deg) skewX(2deg);
+    }
+    
+    .example {
+        background-color: hsl(0, 0%, 0%);
+        filter: opacity(.95);
+    }
+    
+     #star11 {
+        position: absolute;
+        top: -5%;
+        left: 23%;
+        width: 3.5%;
+        height: 3.5%;
+        background-color:  hsl(141, 43%, 46%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star11{
+        animation-name: travelk;
+        animation-duration: 20s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelk{
+        0% {top: -3%; opacity: 0; background-color: hsl(141, 43%, 46%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(141, 43%, 46%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(246, 43%, 46%); transform: rotate(275deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(246, 43%, 46%); transform: rotate(280deg);}
+    }
+    
+   #star12 {
+        position: absolute;
+        top: -5%;
+        left: 28%;
+        width: 5%;
+        height: 5%;
+        background-color:  hsl(3, 43%, 27%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+     #container:hover #star12{
+        animation-name: travell;
+        animation-duration: 20s;
+        animation-delay: 9s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+     @keyframes travell{
+        0% {top: -3%; opacity: 0; background-color: hsl(3, 43%, 27%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(3, 43%, 27%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(154, 43%, 27%); transform: rotate(180deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(154, 43%, 27%); transform: rotate(185deg);}
+
+    }
+    
+    #star13 {
+        position: absolute;
+        top: -5%;
+        left: 33%;
+        width: 4%;
+        height: 4%;
+        background-color:  hsl(333, 43%, 27%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star13{
+        animation-name: travelm;
+        animation-duration: 20s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelm{
+        0% {top: -3%; opacity: 0; background-color: hsl(333, 43%, 27%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(333, 43%, 27%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(333, 43%, 65%); transform: rotate(355deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(333, 43%, 65%); transform: rotate(360deg);}
+    }
+    
+    #star14 {
+        position: absolute;
+        top: -5%;
+        left: 38%;
+        width: 3%;
+        height: 3%;
+        background-color:  hsl(76, 43%, 65%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star14{
+        animation-name: traveln;
+        animation-duration: 20s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes traveln{
+        0% {top: -3%; opacity: 0; background-color: hsl(76, 43%, 65%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(76, 43%, 65%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(214, 43%, 65%); transform: rotate(235deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(214, 43%, 65%); transform: rotate(240deg);}
+    }
+    
+    #star15 {
+        position: absolute;
+        top: -5%;
+        left: 43%;
+        width: 5%;
+        height: 5%;
+        background-color:  hsl(355, 87%, 65%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star15{
+        animation-name: travelo;
+        animation-duration: 20s;
+        animation-delay: 8s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelo{
+        0% {top: -3%; opacity: 0; background-color: hsl(355, 87%, 65%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(355, 87%, 65%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(35, 87%, 65%); transform: rotate(175deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(35, 87%, 65%); transform: rotate(180deg);}
+    }
+    
+    #star16 {
+        position: absolute;
+        top: -5%;
+        left: 47%;
+        width: 4.5%;
+        height: 4.5%;
+        background-color:  hsl(154, 46%, 65%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star16{
+        animation-name: travelp;
+        animation-duration: 20s;
+        animation-delay: 11s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelp{
+        0% {top: -3%; opacity: 0; background-color: hsl(154, 46%, 65%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(154, 46%, 65%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(355, 37%, 65%); transform: rotate(280deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(355, 37%, 65%); transform: rotate(285deg);}
+    }
+    
+    #star17 {
+        position: absolute;
+        top: -5%;
+        left: 52%;
+        width: 5%;
+        height: 5%;
+        background-color:  hsl(43, 26%, 45%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star17{
+        animation-name: travelq;
+        animation-duration: 20s;
+        animation-delay: 4s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelq{
+        0% {top: -3%; opacity: 0; background-color: hsl(43, 26%, 45%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(43, 26%, 45%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(215, 26%, 30%); transform: rotate(305deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(215, 26%, 30%); transform: rotate(310deg);}
+    }
+    
+    #star18 {
+        position: absolute;
+        top: -5%;
+        left: 58%;
+        width: 4%;
+        height: 4%;
+        background-color:  hsl(142, 70%, 22%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star18{
+        animation-name: travelr;
+        animation-duration: 20s;
+        animation-delay: 10s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelr{
+        0% {top: -3%; opacity: 0; background-color: hsl(142, 70%, 22%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(142, 70%, 22%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(196, 70%, 22%); transform: rotate(240deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(196, 70%, 22%); transform: rotate(245deg);}
+    }
+    
+    #star19 {
+        position: absolute;
+        top: -5%;
+        left: 63%;
+        width: 4%;
+        height: 4%;
+        background-color: hsl(339, 70%, 22%) ;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+    #container:hover #star19{
+        animation-name: travels;
+        animation-duration: 20s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    
+    @keyframes travels{
+        0% {top: -3%; opacity: 0; background-color: hsl(339, 70%, 22%); transform: rotate(-5deg);}
+        5% {top: 1%; opacity: 1; background-color: hsl(339, 70%, 22%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(29, 70%, 61%); transform: rotate(215deg);}
+        100% {top: 90%;opacity: 0; background-color: hsl(29, 70%, 61%); transform: rotate(220deg);}
+    }
+    
+   #star20 {
+        position: absolute;
+        top: 1%;
+        left: 68%;
+        width: 3%;
+        height: 3%;
+        background-color: hsl(256, 70%, 48%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        animation-play-state: paused;
+    }
+    
+   #container:hover #star20{
+        animation-name: travelt;
+        animation-duration: 20s;
+        animation-delay: 7s;
+        animation-timing-function: ease-in-out 2.5;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes travelt{
+        0% {top: 1%; opacity: 0; background-color: hsl(256, 70%, 48%); transform: rotate(-5deg);}
+        5% {top: 2%; opacity: 1; background-color: hsl(256, 70%, 48%); transform: rotate(10deg);}
+        80% {top: 85%; opacity: .95; background-color: hsl(306, 70%, 71%); transform: rotate(305deg);}
+        100% {top: 90%; opacity: 0; background-color: hsl(306, 70%, 71%); transform: rotate(310deg);}
+    }
+    
+    .underbase {
+        position: absolute;
+        top: 61.5%;
+        left: 25.25%;
+        width: 49.7%;
+        height: 36%;
+        clip-path: polygon(10% 47%, 91% 47%, 100% 90%, 0% 90%);
+        transform: scale(1.05);
+    }
+    
+    .base {
+        position: absolute;
+        top: 61.5%;
+        left: 25.25%;
+        width: 49.7%;
+        height: 36%;
+        clip-path: polygon(10% 47%, 91% 47%, 100% 90%, 0% 90%);
+        background-image: linear-gradient(hsl(89, 4%, 82%), hsl(181, 96%, 23%) 95%);
+   }
+    
+    h1 {
+        position: absolute;
+        top: 25%;
+        left: 19%;
+        font-family: 'Charmonman', cursive;
+        color: hsl(283, 30%, 40%);
+        font-size: 54px;
+        font-size: 6vw;
+        animation-play-state: paused;
+        
+    }
+     
+    #container:hover h1{
+        animation-name: paris;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    
+    @keyframes paris{
+        from{color: hsl(283, 30%, 40%);}
+        50%{color: hsl(57, 43%, 46%);}
+        to{color: hsl(283, 30%, 40%);}
+    }
+    
+</style>
+</head>
+<body> 
+<div id="container">
+ <div id="globe">
+    <div id="moon"></div>
+    <div id="ground"></div>
+    <div id="building1"></div>
+    <div id="building2"></div>
+    <div id="building3"></div>
+    <div id="building4"></div>
+    <div id="building5"></div>
+    <div id="building6"></div>
+    <div id="building7"></div>
+    <div id="building8"></div>
+    <div id="building9"></div>
+    <div id="star1" ></div>
+    <div id="star2" ></div>
+    <div id="star3"></div>
+    <div id="star4"></div>
+    <div id="star5"></div>
+    <div id="star6"></div>
+    <div id="star7"></div>
+    <div id="star8"></div>
+    <div id="star9"></div>
+    <div id="star10"></div>
+    <div class="foot1 tower"></div>
+    <div class="foot2 tower"></div>
+    <div class="leg1 tower"></div>
+    <div class="leg2 tower"></div>
+    <div class="baseouter"></div>
+    <div class="base1"></div>
+    <div class="leg3 tower"></div>
+    <div class="leg4 tower"></div>
+    <div class="baseouter1"></div>
+    <div class="base2"></div>
+    <div class="leg5 tower"></div>
+    <div class="leg6 tower"></div>
+    <div class="topouter1"></div>
+    <div class="top1"></div>
+    <div class="topouter2"></div>
+    <div class="top2"></div>
+    <div class="top3"></div>
+    <div class="stick1 example"></div>
+    <div class="stick2 example"></div>
+    <div class="stick3 example"></div>
+    <div class="stick4 example"></div>
+    <div class="stick5 example"></div>
+    <div class="stick6 example"></div>
+    <div class="stick7 example"></div>
+    <div class="stick8 example"></div>
+    <div class="stick9 example"></div>
+    <div class="stick10 example"></div>
+    <div class="stick11 example"></div>
+    <div class="stick12 example"></div>
+    <div class="stick13 example"></div>
+    <div class="stick14 example"></div>
+    <div class="stick15 example"></div>
+    <div class="stick16 example"></div>
+    <div class="stick17 example"></div>
+    <div id="star11"></div>
+    <div id="star12"></div>
+    <div id="star13"></div>
+    <div id="star14"></div>
+    <div id="star15"></div>
+    <div id="star16"></div>
+    <div id="star17"></div>
+    <div id="star18"></div>
+    <div id="star19"></div>
+    <div id="star20"></div>
+    
+ </div>
+    <div class="underbase example"></div>
+    <div class="base"><h1>PARIS</h1></div>
+</div>
+</body>
+</html>
